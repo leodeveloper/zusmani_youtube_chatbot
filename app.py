@@ -53,8 +53,8 @@ def generate_response(user_input):
 
 # Sidebar content
 st.sidebar.title('Zeeshan Usmani YouTube Channel')
-#st.sidebar.image('channel_pic.jpg', use_column_width=True)
-st.sidebar.header('YouTube Video Titles')
+st.sidebar.image('https://yt3.googleusercontent.com/a-Sr9AQV5fW43HXMCV7FmFOb5ngJx3_jm7lsFf2q0MyM3-RUMQbW9Sa-2o8AizzGUjMRLO-wPQ=s160-c-k-c0x00ffffff-no-rj', use_column_width=True)
+st.sidebar.header("YouTube Video's")
 video_titles = load_video_titles()
 for item in video_titles:
     st.sidebar.image(f"{item['thumbnail_url']}", use_column_width=True)
@@ -63,10 +63,11 @@ for item in video_titles:
 
 # Main content
 st.title('Zeeshan Usmani YouTube Channel Chatbot')
-st.header('You can chat with Zeeshan Usmani YouTube Channel videos')
+st.header('You may chat with Zeeshan Usmani YouTube Channel videos')
 user_input = st.text_area('Enter your message:')
 if st.button('Show Response'):
     response = generate_response(user_input)
+    #st.write_stream(response)
     st.write(response)
 
 # Footer
