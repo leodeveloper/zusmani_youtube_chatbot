@@ -2,15 +2,18 @@ import streamlit as st
 import json
 from datetime import datetime
 import os
+
 from llama_index.llms.groq import Groq
 from llama_index.core import Settings
-#from llama_index.llms.openai import OpenAI
+
+from llama_index.llms.openai import OpenAI
 from llama_index.core import (
     VectorStoreIndex,
     SimpleDirectoryReader,
     StorageContext,
     load_index_from_storage,
 )
+
 from llama_index.core.response.pprint_utils import pprint_response
 
 from dotenv import load_dotenv

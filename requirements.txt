@@ -1,5 +1,6 @@
 streamlit
 llama_index
+llama-index-llms-groq
+llama_index.core
 python-dotenv
 jsonpath-ng
-groq
