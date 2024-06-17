@@ -60,7 +60,7 @@ st.sidebar.image('https://yt3.googleusercontent.com/a-Sr9AQV5fW43HXMCV7FmFOb5ngJ
 st.sidebar.header("YouTube Video's")
 video_titles = load_video_titles()
 for item in video_titles:
-    st.sidebar.image(f"{item['thumbnail_url']}", use_column_width=True)
+    #st.sidebar.image(f"{item['thumbnail_url']}", use_column_width=True)
     st.sidebar.write(f"{item['title']}")
     st.sidebar.write(f"{item['publish_date']}")
 
