@@ -57,12 +57,12 @@ def generate_response(user_input):
 # Sidebar content
 st.sidebar.title('Zeeshan Usmani YouTube Channel')
 st.sidebar.image('https://yt3.googleusercontent.com/a-Sr9AQV5fW43HXMCV7FmFOb5ngJx3_jm7lsFf2q0MyM3-RUMQbW9Sa-2o8AizzGUjMRLO-wPQ=s160-c-k-c0x00ffffff-no-rj', use_column_width=True)
-st.sidebar.header("YouTube Video's")
-video_titles = load_video_titles()
-for item in video_titles:
+#st.sidebar.header("YouTube Video's")
+#video_titles = load_video_titles()
+#for item in video_titles:
     #st.sidebar.image(f"{item['thumbnail_url']}", use_column_width=True)
-    st.sidebar.write(f"{item['title']}")
-    st.sidebar.write(f"{item['publish_date']}")
+#    st.sidebar.write(f"{item['title']}")
+#    st.sidebar.write(f"{item['publish_date']}")
 
 # Main content
 st.title('Zeeshan Usmani YouTube Channel Chatbot')
