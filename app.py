@@ -14,13 +14,14 @@ from llama_index.core import (
     load_index_from_storage,
 )
 
-from llama_index.core.response.pprint_utils import pprint_response
+#from llama_index.core.response.pprint_utils import pprint_response
+#from llama_index.core.memory import ChatMemoryBuffer
 
 from dotenv import load_dotenv
 load_dotenv()
 
 os.environ['GROQ_API_KEY']=os.getenv("GROQ_API_KEY")
-llm = Groq(temperature=0.5,model="llama3-8b-8192")
+llm = Groq(temperature=1,model="llama3-70b-8192")
 Settings.llm = llm
 
 
@@ -53,7 +54,10 @@ def generate_response(user_input):
         index = load_index_from_storage(storage_context)
 
     query_engine = index.as_chat_engine(chat_mode="context", llm=llm,verbose=True)
-    response = query_engine.chat(user_input)
+
+   
+
+    response = query_engine.chat(f"{user_input} with yotube link, publish date and view count")
     return response.response
 
 # Sidebar content
@@ -79,6 +83,9 @@ if st.button('Show Response'):
         response = generate_response(user_input)
         #st.write_stream(response)
         st.write(response)
+        st.write('-----------------------')
+        #res=pprint_response(response,show_source=True)
+        #st.write(res)
 
 # Footer
 st.markdown('---')
