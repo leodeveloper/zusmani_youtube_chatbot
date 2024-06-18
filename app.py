@@ -72,6 +72,7 @@ for item in video_titles:
 # Main content
 st.title('Zeeshan Usmani YouTube Channel Chatbot')
 st.header('You may chat with Zeeshan Usmani YouTube Channel videos')
+st.write('last update on 06 June 2024')
 user_input = st.text_area('Enter your message:')
 if st.button('Show Response'):
     with st.spinner("In progress..."):
