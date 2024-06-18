@@ -54,9 +54,6 @@ def generate_response(user_input):
         index = load_index_from_storage(storage_context)
 
     query_engine = index.as_chat_engine(chat_mode="context", llm=llm,verbose=True)
-
-   
-
     response = query_engine.chat(f"{user_input} with yotube link, publish date and view count")
     return response.response
 
