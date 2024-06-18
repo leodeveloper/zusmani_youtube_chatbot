@@ -74,9 +74,10 @@ st.title('Zeeshan Usmani YouTube Channel Chatbot')
 st.header('You may chat with Zeeshan Usmani YouTube Channel videos')
 user_input = st.text_area('Enter your message:')
 if st.button('Show Response'):
-    response = generate_response(user_input)
-    #st.write_stream(response)
-    st.write(response)
+    with st.spinner("In progress..."):
+        response = generate_response(user_input)
+        #st.write_stream(response)
+        st.write(response)
 
 # Footer
 st.markdown('---')
